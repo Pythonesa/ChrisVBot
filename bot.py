@@ -13,6 +13,7 @@ class ChatReader(commands.Bot):
         self.add_command(bc.help)
         self.add_command(bc.streams)
         self.add_command(bc.first)
+        self.add_command(bc.hug)
 
     
     async def event_ready(self):
