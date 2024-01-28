@@ -10,9 +10,10 @@
 
 Aquí hay una lista de algunos comandos que ChrisVBot puede manejar:
 
-- `!hola`: El bot te saluda personalizadamente.
-- `!abrazo`: Permite abrazar a otro usuario en el chat. Usa `!abrazo [nombre de usuario]`.
-- `!comandos`: Muestra la lista de comandos disponibles.
+- `!help`: Muestra la lista de comandos.
+- `!hug`: Permite abrazar a otro usuario en el chat. Usa `!hug [nombre de usuario]`.
+- `!first`: Muestra quien fue el primero en utilizar el comando.
+- `!streams`: Muestra los horarios de los streams.
 
 ## Próximas Actualizaciones 🚀
 
