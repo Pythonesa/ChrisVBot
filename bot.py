@@ -10,7 +10,8 @@ class ChatReader(commands.Bot):
             initial_channels=['chrisvdev']
         )
 
-        self.add_command(bc.commands)
+        self.add_command(bc.help)
+        self.add_command(bc.streams)
 
     
     async def event_ready(self):
