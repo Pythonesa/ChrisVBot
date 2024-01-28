@@ -1,5 +1,6 @@
 from _secrets import IRC_TOKEN
 from twitchio.ext import commands
+import bot_commands.bot_commands as bc
 
 class ChatReader(commands.Bot):
     def __init__(self):
@@ -8,6 +9,8 @@ class ChatReader(commands.Bot):
             prefix='!',
             initial_channels=['chrisvdev']
         )
+
+        self.add_command(bc.commands)
 
     
     async def event_ready(self):
