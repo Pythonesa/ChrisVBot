@@ -2,10 +2,11 @@ from twitchio.ext import commands
 from bot_commands.first_handler import FirstHandler as fch
 from bot_commands.second_hadler import SecondHandler as sch
 from bot_commands.hug_handler import get_hug, get_hug_without_to_user, get_hug_to_self
+from bot_commands.bugs_handler import BugsHandler as bh
 
 @commands.command(name='help')
 async def help(ctx):
-    await ctx.send(f"Acepto los siguientes comandos: !streams !first !second !hug !leak")
+    await ctx.send(f"Acepto los siguientes comandos: !streams !first !second !hug !leak !bug")
 
 @commands.command(name='streams')
 async def streams(ctx):
@@ -32,3 +33,7 @@ async def hug(ctx, *, nick: str = None):
 @commands.command(name="leak")
 async def leak(ctx):
     await ctx.send("¡Póngase una toalla señor que se le ve todo!")
+
+@commands.command(name="bug")
+async def bug(ctx):
+    await ctx.send(bh.add_bug(ctx.author.name))
