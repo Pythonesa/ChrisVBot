@@ -17,6 +17,7 @@ class ChatReader(commands.Bot):
         self.add_command(bc.hug)
         self.add_command(bc.leak)
         self.add_command(bc.bug)
+        self.add_command(bc.sape)
 
     
     async def event_ready(self):

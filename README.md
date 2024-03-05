@@ -17,6 +17,7 @@ Aquí hay una lista de algunos comandos que ChrisVBot puede manejar:
 - `!streams`: Muestra los horarios de los streams.
 - `!leak`: Avisa al streamer que está leakeando algo.
 - `!bug`: Suma un nuevo bug.
+- `!sape`: Cuenta las veces que Pythonesa sapea a Chris o usándolo como `!sape [usuario]` puedes sapear a otro usuario.
 
 ## Próximas Actualizaciones 🚀
 

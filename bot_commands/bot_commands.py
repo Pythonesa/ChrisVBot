@@ -3,10 +3,11 @@ from bot_commands.first_handler import FirstHandler as fch
 from bot_commands.second_hadler import SecondHandler as sch
 from bot_commands.hug_handler import get_hug, get_hug_without_to_user, get_hug_to_self
 from bot_commands.bugs_handler import BugsHandler as bh
+from bot_commands.sape_handler import SapeHandler as sh
 
 @commands.command(name='help')
 async def help(ctx):
-    await ctx.send(f"Acepto los siguientes comandos: !streams !first !second !hug !leak !bug")
+    await ctx.send(f"Acepto los siguientes comandos: !streams !first !second !hug !leak !bug !sape")
 
 @commands.command(name='streams')
 async def streams(ctx):
@@ -37,3 +38,11 @@ async def leak(ctx):
 @commands.command(name="bug")
 async def bug(ctx):
     await ctx.send(bh.add_bug(ctx.author.name))
+
+@commands.command(name="sape")
+async def sape(ctx, *, nick: str = None):
+    if not nick:
+        await ctx.send(sh.sape())
+    else:
+        await ctx.send(sh.sape_to_user(ctx.author.name, nick))
+    
