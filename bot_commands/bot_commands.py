@@ -1,5 +1,6 @@
 from twitchio.ext import commands
 from bot_commands.first_handler import FirstHandler as fch
+from bot_commands.second_hadler import SecondHandler as sch
 from bot_commands.hug_handler import get_hug, get_hug_without_to_user, get_hug_to_self
 
 @commands.command(name='help')
@@ -13,6 +14,10 @@ async def streams(ctx):
 @commands.command(name='first')
 async def first(ctx):
     await ctx.send(fch.process_first_command(ctx.author.name))
+
+@commands.command(name='second')
+async def second(ctx):
+    await ctx.send(sch.process_second_command(ctx.author.name))
 
 @commands.command(name="hug")
 async def hug(ctx, *, nick: str = None):
