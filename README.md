@@ -15,6 +15,7 @@ Aquí hay una lista de algunos comandos que ChrisVBot puede manejar:
 - `!first`: Muestra quien fue el primero en utilizar el comando.
 - `!second`: Muestra quien fue el primero en utilizar el comando.
 - `!streams`: Muestra los horarios de los streams.
+- `!leak`: Avisa al streamer que está leakeando algo.
 
 ## Próximas Actualizaciones 🚀
 

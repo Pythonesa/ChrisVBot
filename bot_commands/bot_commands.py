@@ -5,7 +5,7 @@ from bot_commands.hug_handler import get_hug, get_hug_without_to_user, get_hug_t
 
 @commands.command(name='help')
 async def help(ctx):
-    await ctx.send(f"Acepto los siguientes comandos: !streams !first !second !hug")
+    await ctx.send(f"Acepto los siguientes comandos: !streams !first !second !hug !leak")
 
 @commands.command(name='streams')
 async def streams(ctx):
@@ -28,3 +28,7 @@ async def hug(ctx, *, nick: str = None):
         await ctx.send(get_hug_to_self(ctx.author.name))
     else:
         await ctx.send(get_hug(ctx.author.name, nick))
+
+@commands.command(name="leak")
+async def leak(ctx):
+    await ctx.send("¡Póngase una toalla señor que se le ve todo!")
