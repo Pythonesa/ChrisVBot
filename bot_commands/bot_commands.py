@@ -5,7 +5,7 @@ from bot_commands.hug_handler import get_hug, get_hug_without_to_user, get_hug_t
 
 @commands.command(name='help')
 async def help(ctx):
-    await ctx.send(f"Acepto los siguientes comandos: !streams !first !hug")
+    await ctx.send(f"Acepto los siguientes comandos: !streams !first !second !hug")
 
 @commands.command(name='streams')
 async def streams(ctx):
