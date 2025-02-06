@@ -8,7 +8,7 @@ class ChatReader(commands.Bot):
         super().__init__(
             token=IRC_TOKEN,
             prefix='!',
-            initial_channels=['pythonesa']
+            initial_channels=['chrisvdev']
         )
 
         self.add_command(bc.help)
