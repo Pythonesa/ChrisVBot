@@ -1,9 +1,11 @@
 from bot_commands.first_handler import FirstHandler as fh
+
+
 class SecondHandler:
     second_user = ""
 
     @staticmethod
-    def process_second_command(user):
+    def process_francia_command(user):
         if fh.first_user == "":
             return f"{user}, no puedes reclamar el segundo lugar si no hay un primero."
         else:
@@ -16,4 +18,3 @@ class SecondHandler:
                 return f"{user}, cálmate que la medalla ya te la dieron!"
             else:
                 return f"Cálmate {user}, {SecondHandler.second_user} llegó antes."
-                
