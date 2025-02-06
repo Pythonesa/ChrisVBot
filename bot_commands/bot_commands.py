@@ -13,7 +13,7 @@ async def help(ctx):
 
 @commands.command(name='streams')
 async def streams(ctx):
-    await ctx.send(f"Hay streams los lunes, miércoles y jueves a partir de las 20:00 hora Argentina. Además, los Sábados a la noche jugamos.")
+    await ctx.send(f"Hay streams los lunes, miércoles y viernes a partir de las 20:00 hora Argentina. Además, los Sábados a la noche jugamos.")
 
 
 @commands.command(name='first')
