@@ -9,7 +9,7 @@ from bot_commands.hit_handler import get_hit, get_hit_without_to_user, get_hit_t
 
 @commands.command(name='help')
 async def help(ctx):
-    await ctx.send(f"Acepto los siguientes comandos: !streams !first !francia !hug !leak !bug !sape !porro !carritos !encuesta !pythonesa !sensei !padauchi !hamster")
+    await ctx.send(f"Acepto los siguientes comandos: !streams !first !francia !hug !leak !bug !sape !porro !carritos !encuesta !pythonesa !sensei !padauchi !hamster !hit")
 
 
 @commands.command(name='streams')
