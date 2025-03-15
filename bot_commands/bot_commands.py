@@ -100,3 +100,15 @@ async def hit(ctx, *, nick: str = None):
         await ctx.send(get_hit_to_self(ctx.author.name))
     else:
         await ctx.send(get_hit(ctx.author.name, nick))
+
+
+@commands.command(name="reset")
+async def reset(ctx):
+    if ctx.author.name != "chrisvdev":
+        await ctx.send("No eres Chris, no quieras hacer trampa, este es un stream libre de tongos.")
+    else:
+        fch.first_user = ""
+        sch.second_user = ""
+        bh.bugs_counter = 0
+        sh.sapes = 0
+        await ctx.send("¡He reiniciado todos los contadores y ya puedes pelear por el first que es lo único que te importa!")
