@@ -8,7 +8,7 @@ from bot_commands.sape_handler import SapeHandler as sh
 
 @commands.command(name='help')
 async def help(ctx):
-    await ctx.send(f"Acepto los siguientes comandos: !streams !first !francia !hug !leak !bug !sape !porro !carritos !encuesta !pythonesa !sensei !padauchi")
+    await ctx.send(f"Acepto los siguientes comandos: !streams !first !francia !hug !leak !bug !sape !porro !carritos !encuesta !pythonesa !sensei !padauchi !hamster")
 
 
 @commands.command(name='streams')
@@ -83,3 +83,8 @@ async def sape(ctx, *, nick: str = None):
         await ctx.send(sh.sape())
     else:
         await ctx.send(sh.sape_to_user(ctx.author.name, nick))
+
+
+@commands.command(name="hamster")
+async def hamster(ctx):
+    await ctx.send("No puedes ser feliz si no sigues a Afor! Siguela en su canal de twitch https://twitch.tv/afor_digital quizás hasta llegues a formar parte de la élite que sabe que HTML es un lenguaje de programación!")
