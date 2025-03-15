@@ -1,5 +1,6 @@
 import random
 
+
 def get_hug_without_to_user(nick):
     WITHOUT_TO_USER = [
         f"No puedes abrazar al aire, {nick}. ¿Lo sabes, verdad?",
@@ -23,8 +24,9 @@ def get_hug_without_to_user(nick):
         f"Parece que {nick} quiere abrazar a todo el chat de una vez.",
         f"¡Tal vez {nick} vio algo que nosotros no vimos!"
     ]
-    
+
     return random.choice(WITHOUT_TO_USER)
+
 
 def get_hug_to_self(nick):
     TO_SELF = [
@@ -51,6 +53,7 @@ def get_hug_to_self(nick):
     ]
 
     return random.choice(TO_SELF)
+
 
 def get_hug(nick, to_user):
     TO_USER = [
@@ -146,5 +149,5 @@ def get_hug(nick, to_user):
         f"{nick} y {to_user}, ¡la combinación perfecta para un abrazo perfecto!",
         f"¡Es un abrazo que vale la pena recordar entre {nick} y {to_user}!"
     ]
-    
+
     return random.choice(TO_USER)

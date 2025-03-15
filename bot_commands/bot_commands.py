@@ -4,6 +4,7 @@ from bot_commands.second_hadler import SecondHandler as sch
 from bot_commands.hug_handler import get_hug, get_hug_without_to_user, get_hug_to_self
 from bot_commands.bugs_handler import BugsHandler as bh
 from bot_commands.sape_handler import SapeHandler as sh
+from bot_commands.hit_handler import get_hit, get_hit_without_to_user, get_hit_to_self
 
 
 @commands.command(name='help')
@@ -88,3 +89,14 @@ async def sape(ctx, *, nick: str = None):
 @commands.command(name="hamster")
 async def hamster(ctx):
     await ctx.send("No puedes ser feliz si no sigues a Afor! Siguela en su canal de twitch https://twitch.tv/afor_digital quizás hasta llegues a formar parte de la élite que sabe que HTML es un lenguaje de programación!")
+
+
+@commands.command(name="hit")
+async def hit(ctx, *, nick: str = None):
+    if not nick:
+        await ctx.send(get_hit_without_to_user(ctx.author.name))
+        return
+    elif nick.lower() == ctx.author.name.lower():
+        await ctx.send(get_hit_to_self(ctx.author.name))
+    else:
+        await ctx.send(get_hit(ctx.author.name, nick))

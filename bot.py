@@ -26,9 +26,12 @@ class ChatReader(commands.Bot):
         self.add_command(bc.sensei)
         self.add_command(bc.padauchi)
         self.add_command(bc.hamster)
+        self.add_command(bc.hit)
 
     async def event_ready(self):
         print(f"Bot has connected to Twitch as {self.nick}")
+        channel = self.connected_channels[0]
+        await channel.send("¡Estoy online, peleen por el first!")
 
 
 def main():
