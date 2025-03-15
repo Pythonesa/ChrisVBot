@@ -5,11 +5,12 @@ from bot_commands.hug_handler import get_hug, get_hug_without_to_user, get_hug_t
 from bot_commands.bugs_handler import BugsHandler as bh
 from bot_commands.sape_handler import SapeHandler as sh
 from bot_commands.hit_handler import get_hit, get_hit_without_to_user, get_hit_to_self
+from bot_commands.bold_handler import bold
 
 
 @commands.command(name='help')
 async def help(ctx):
-    await ctx.send(f"Acepto los siguientes comandos: !streams !first !francia !hug !leak !bug !sape !porro !carritos !encuesta !pythonesa !sensei !padauchi !hamster !hit")
+    await ctx.send(f"Acepto los siguientes comandos: !streams !first !francia !hug !leak !bug !sape !porro !carritos !encuesta !pythonesa !sensei !padauchi !hamster !hit !pelado")
 
 
 @commands.command(name='streams')
@@ -112,3 +113,8 @@ async def reset(ctx):
         bh.bugs_counter = 0
         sh.sapes = 0
         await ctx.send("¡He reiniciado todos los contadores y ya puedes pelear por el first que es lo único que te importa!")
+
+
+@commands.command(name="pelado")
+async def pelado(ctx):
+    await ctx.send(bold())
