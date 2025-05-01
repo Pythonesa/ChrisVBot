@@ -29,6 +29,7 @@ class ChatReader(commands.Bot):
         self.add_command(bc.hit)
         self.add_command(bc.reset)
         self.add_command(bc.pelado)
+        self.add_command(bc.amor)
 
     async def event_ready(self):
         print(f"Bot has connected to Twitch as {self.nick}")

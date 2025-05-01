@@ -6,11 +6,12 @@ from bot_commands.bugs_handler import BugsHandler as bh
 from bot_commands.sape_handler import SapeHandler as sh
 from bot_commands.hit_handler import get_hit, get_hit_without_to_user, get_hit_to_self
 from bot_commands.bold_handler import bold
+from bot_commands.love_handler import get_love_with_user, get_love_air
 
 
 @commands.command(name='help')
 async def help(ctx):
-    await ctx.send(f"Acepto los siguientes comandos: !streams !first !francia !hug !leak !bug !sape !porro !carritos !encuesta !pythonesa !sensei !padauchi !hamster !hit !pelado")
+    await ctx.send(f"Acepto los siguientes comandos: !streams !first !francia !hug !leak !bug !sape !porro !carritos !encuesta !pythonesa !sensei !padauchi !hamster !hit !pelado !amor")
 
 
 @commands.command(name='streams')
@@ -118,3 +119,11 @@ async def reset(ctx):
 @commands.command(name="pelado")
 async def pelado(ctx):
     await ctx.send(bold())
+
+
+@commands.command(name="amor")
+async def amor(ctx, *, nick: str = None):
+    if not nick:
+        await ctx.send(get_love_air(ctx.author.name))
+    else:
+        await ctx.send(get_love_with_user(ctx.author.name, nick))
